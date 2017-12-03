@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RunnerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="runnerRight" translatesAutoresizingMaskIntoConstraints="NO" id="9lS-f8-3OS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oval" translatesAutoresizingMaskIntoConstraints="NO" id="Fld-Mt-n5W">
+                                <rect key="frame" x="16" y="118" width="159" height="160"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NO-LA-Dhv">
+                                <rect key="frame" x="53.5" y="286" width="84" height="41"/>
+                                <color key="backgroundColor" red="0.97663128901022089" green="0.48833601228164675" blue="0.20964705713793472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4NO-LA-Dhv" secondAttribute="height" multiplier="41:20" id="gju-Fq-CWJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                <color key="tintColor" red="0.94770142665881696" green="0.97663128901022089" blue="0.92180784328894105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R66-rK-BvX"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FY-Uw-Z1f">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Stop" id="SbL-vf-Tds">
+                                        <connections>
+                                            <action selector="stopTapped:" destination="BYZ-38-t0r" id="a8A-AH-5XV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oUO-fv-zbg"/>
+                                    <barButtonItem style="plain" id="iw4-QG-EcZ">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ld6-rv-ark">
+                                            <rect key="frame" x="320" y="7" width="39" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Reset"/>
+                                            <connections>
+                                                <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XRs-Wh-bFv"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pVK-Op-VDZ">
+                                <rect key="frame" x="56.5" y="169" width="77" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pVK-Op-VDZ" secondAttribute="height" multiplier="4:3" id="GLQ-cY-qhf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1FY-Uw-Z1f" secondAttribute="bottom" id="GKF-n5-uKb"/>
+                            <constraint firstItem="4NO-LA-Dhv" firstAttribute="top" secondItem="Fld-Mt-n5W" secondAttribute="bottom" constant="8" id="H3B-7L-h1P"/>
+                            <constraint firstAttribute="trailing" secondItem="9lS-f8-3OS" secondAttribute="trailing" id="MsW-FF-ltU"/>
+                            <constraint firstItem="1FY-Uw-Z1f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OS9-Mz-yT1"/>
+                            <constraint firstAttribute="trailing" secondItem="1FY-Uw-Z1f" secondAttribute="trailing" id="S3F-Q3-3Ux"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9lS-f8-3OS" secondAttribute="bottom" id="UKh-Jm-1CX"/>
+                            <constraint firstItem="9lS-f8-3OS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VX7-SZ-wzU"/>
+                            <constraint firstItem="pVK-Op-VDZ" firstAttribute="centerY" secondItem="Fld-Mt-n5W" secondAttribute="centerY" id="ccw-5i-rXP"/>
+                            <constraint firstItem="4NO-LA-Dhv" firstAttribute="centerX" secondItem="Fld-Mt-n5W" secondAttribute="centerX" id="fKx-Gg-KnJ"/>
+                            <constraint firstItem="Fld-Mt-n5W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kgi-e7-NNY"/>
+                            <constraint firstItem="Fld-Mt-n5W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="mDS-Rw-pZi"/>
+                            <constraint firstItem="9lS-f8-3OS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nhB-pY-I9o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fld-Mt-n5W" secondAttribute="trailing" constant="184" id="r75-6y-HH9"/>
+                            <constraint firstItem="pVK-Op-VDZ" firstAttribute="centerX" secondItem="Fld-Mt-n5W" secondAttribute="centerX" id="x1o-om-LOn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startBtn" destination="4NO-LA-Dhv" id="hjM-9W-OJ5"/>
+                        <outlet property="timeLable" destination="pVK-Op-VDZ" id="ydM-eJ-9hL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Oval" width="159" height="160"/>
+        <image name="runnerRight" width="364" height="530"/>
+    </resources>
+</document>
